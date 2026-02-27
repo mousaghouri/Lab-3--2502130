@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Musa ghouri - 2502130
+        </title>
+
+
+    </head>
+    <body>
+        <script>
+function checkStatus(callback) {
+  setTimeout(() => {
+    callback("Status OK");
+  }, 2000);
+}
+
+// Promisified version
+function checkStatusPromise() {
+  return new Promise((resolve) => {
+    checkStatus((status) => {
+      resolve(status);
+    });
+  });
+}
+
+// Example usage
+checkStatusPromise().then((result) => {
+  console.log(result); // Logs: Status OK after 2 seconds
+});
+</script>
+    </body>
+</html>

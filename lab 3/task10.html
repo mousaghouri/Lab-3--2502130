@@ -1,0 +1,26 @@
+
+<html>
+<head>
+ 
+  <title>Mousa -2502130</title>
+</head>
+<body>
+ 
+
+  <script>
+    let counter = sessionStorage.getItem('reloadCounter');
+
+    if (counter === null) {
+      counter = 0;
+    } else {
+      counter = parseInt(counter, 10);
+    }
+
+    counter += 1;
+    sessionStorage.setItem('reloadCounter', counter);
+
+    document.getElementById('counterDisplay').textContent = 
+      `This page has been reloaded ${counter} times in this session.`;
+  </script>
+</body>
+</html>
